@@ -53,5 +53,5 @@ $input = new TreeNode(10,new TreeNode(4),new TreeNode(6));
 $sol = new Solution($input);
 $res = $sol->checkTree($input );
 
-var_dump($res);
-print_r($input);
+//var_dump($res);
+//print_r($input);
