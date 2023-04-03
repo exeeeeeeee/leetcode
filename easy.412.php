@@ -28,12 +28,12 @@ Constraints:
 
 */
 
-class Solution {
+/* class Solution {
 
     /**
      * @param Integer $n
      * @return String[]
-     */
+     * /
     function fizzBuzz($n) {
         $res = [];
 
@@ -44,19 +44,35 @@ class Solution {
 
             if ($res[$i] == '') $res[$i] = (string) $i;
             
-           
-               
-
         }
         return $res;
         
-    }
-}
-    /*  echo "
-                ";
-                print_r($res);*/
+    } 
+}*/
 
-$input = 16;
+
+
+class Solution {
+
+    /**
+     * @param Integer $n
+     * @return String[]
+     */
+    function fizzBuzz($n) {
+        
+        return array_map( fn($v):string => $v % 3 === 0 ? ($v % 5 === 0 ? "FizzBuzz" : "Fizz") : ($v % 5 === 0 ? "Buzz" : $v) , array_combine(range(1, $n), range(1, $n)  ) );
+
+    }
+
+ /*    function fun($v) : string {
+        return   $v % 3 === 0 ? ($v % 5 === 0 ? "FizzBuzz" : "Fizz") : ($v % 5 === 0 ? "Buzz" : $v);
+    } */
+}
+
+ 
+ 
+
+$input = 15;
 
 $sol = new Solution($input);
 $res = $sol->fizzBuzz($input );
